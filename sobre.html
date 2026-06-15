@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.R.R. Tolkien - Sobre</title>
+
+    <style>
+        /* Reset simples */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4ecd8;
+            color: #2d2d2d;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1f4f3a, #5f3b1f);
+            color: #fff8e7;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            font-family: Georgia, serif;
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background-color: #2f3e2f;
+            padding: 12px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #fff8e7;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover,
+        nav a.ativo {
+            color: #d4af37;
+        }
+
+        main {
+            width: 90%;
+            max-width: 1100px;
+            margin: 25px auto;
+        }
+
+        section,
+        article,
+        aside {
+            background-color: #fff8e7;
+            margin-bottom: 25px;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        }
+
+        h2,
+        h3 {
+            color: #1f4f3a;
+            font-family: Georgia, serif;
+            margin-bottom: 10px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            margin: 15px 0;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+
+        /* Tabela simples */
+        .tabela-container {
+            overflow-x: auto;
+            margin-top: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th {
+            background-color: #1f4f3a;
+            color: #fff8e7;
+            padding: 12px;
+            text-align: left;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #d8c9a7;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f4ecd8;
+        }
+
+        /* Iframe responsivo */
+        iframe {
+            width: 100%;
+            height: 320px;
+            border: 0;
+            border-radius: 12px;
+            margin-top: 15px;
+        }
+
+        aside {
+            border-left: 6px solid #d4af37;
+        }
+
+        footer {
+            background-color: #2f3e2f;
+            color: #fff8e7;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #d4af37;
+        }
+
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            iframe {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Cabeçalho da página Sobre -->
+    <header>
+        <h1>Sobre Tolkien e a Terra-média</h1>
+        <p>Conheça melhor a história do autor e de seu universo literário.</p>
+    </header>
+
+    <!-- Menu de navegação -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html" class="ativo">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Seção com hierarquia de títulos -->
+        <section>
+            <h2>A vida de J.R.R. Tolkien</h2>
+            <p>
+                John Ronald Reuel Tolkien nasceu em 1892 e ficou conhecido por criar um dos
+                universos fictícios mais detalhados da literatura. Além de escritor, ele foi
+                professor universitário e estudioso de línguas.
+
+            </p>
+            <br>
+
+            <h3>Professor e criador de mundos</h3>
+            <p>
+                Sua formação em filologia influenciou diretamente sua obra. Antes mesmo de criar
+                muitas histórias, Tolkien já desenvolvia idiomas, nomes, povos e tradições que
+                depois fariam parte da Terra-média.
+            </p>
+
+            <img src="assets/terra-media.png"
+                alt="Ilustração da Terra-média, mostrando montanhas, rios e florestas em um estilo de mapa antigo">
+        </section>
+
+        <!-- Artigo explicativo -->
+        <article>
+            <h2>A criação da Terra-média</h2>
+            <p>
+                A Terra-média é o cenário principal de muitas narrativas de Tolkien. Ela possui
+                povos, reinos, línguas, lendas, guerras antigas e personagens marcantes.
+            </p>
+            <br>
+            <h3>Povos importantes</h3>
+            <ul>
+                <li>Hobbits</li>
+                <li>Elfos</li>
+                <li>Anões</li>
+                <li>Homens</li>
+                <li>Orcs</li>
+            </ul>
+        </article>
+
+        <!-- Tabela como desafio extra -->
+        <section>
+            <h2>Obras importantes</h2>
+            <p>A tabela abaixo apresenta algumas obras relacionadas ao universo de Tolkien.</p>
+
+            <div class="tabela-container">
+                <table>
+                    <tr>
+                        <th>Obra</th>
+                        <th>Ano de publicação</th>
+                        <th>Tipo</th>
+                    </tr>
+                    <tr>
+                        <td>O Hobbit</td>
+                        <td>1937</td>
+                        <td>Romance de fantasia</td>
+                    </tr>
+                    <tr>
+                        <td>O Senhor dos Anéis</td>
+                        <td>1954-1955</td>
+                        <td>Romance dividido em três volumes</td>
+                    </tr>
+                    <tr>
+                        <td>O Silmarillion</td>
+                        <td>1977</td>
+                        <td>Mitologia ficcional</td>
+                    </tr>
+                    <tr>
+                        <td>Contos Inacabados</td>
+                        <td>1980</td>
+                        <td>Coletânea de textos</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <!-- Vídeo biografia -->
+        <section>
+            <h2>Por que você deve ler J.R.R. Tolkien?</h2>
+            <p>
+                Assista ao vídeo abaixo do filósofo Guilherme Freire explicando a importância de Tolkien para além da
+                literatura e para a cultura pop, destacando a riqueza filosófica e metáfisica presente em suas obras,
+                sendo uma leitura que pode enriquecer a mente e o espírito de qualquer pessoa, mesmo aquelas que não são
+                fãs de fantasia.
+            </p>
+            <iframe src="https://www.youtube.com/embed/xUbtxXN-MII?si=FBnrpKmJOJSwpols"
+                title="Vídeo explicando por que ler J.R.R. Tolkien"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <!-- Conteúdo complementar -->
+        <aside>
+            <h2>Curiosidade</h2>
+            <p>
+                A lápide de J.R.R. Tolkien e sua esposa Edith Mary Tolkien (nascida Bratt), localizada no Cemitério de
+                Wolvercote em Oxford, é um dos monumentos literários mais famosos do mundo por conter os nomes de Beren
+                e Lúthien entalhados na pedra.
+            </p>
+        </aside>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>
+            Veja também informações em
+            <a href="https://www.britannica.com/biography/J-R-R-Tolkien" target="_blank">Britannica</a>.
+        </p>
+    </footer>
+</body>
+
+</html>
