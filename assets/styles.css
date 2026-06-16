@@ -241,13 +241,6 @@ button:hover {
     background-color: var(--color-primary-dark);
 }
 
-.mensagem-formulario {
-    min-height: 1.6em;
-    margin-top: 12px;
-    color: var(--color-primary);
-    font-weight: bold;
-}
-
 .aviso-formulario {
     margin-top: 25px;
     background-color: var(--color-page);

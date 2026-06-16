@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>J.R.R. Tolkien - Contato</title>
     <link rel="stylesheet" href="assets/styles.css">
-    <script src="assets/contato.js" defer></script>
 </head>
 
 <body>
@@ -32,7 +31,11 @@
                     sobre o universo de <strong>J.R.R. Tolkien</strong>.
                 </p>
 
-                <form id="form-contato" action="#" method="post" aria-describedby="retorno-formulario">
+                <form action="https://formsubmit.co/andersonalmeida1008@gmail.com" method="post">
+                    <input type="hidden" name="_subject" value="Nova mensagem do Projeto Tolkien">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://andyinthenw.github.io/projeto-tolkien/obrigado.html">
+
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" name="nome" placeholder="Digite seu nome" autocomplete="name"
                         maxlength="80" required>
@@ -60,7 +63,6 @@
                         required></textarea>
 
                     <button type="submit">Enviar mensagem</button>
-                    <p id="retorno-formulario" class="mensagem-formulario" role="status" aria-live="polite"></p>
                 </form>
 
                 <article class="aviso-formulario">
