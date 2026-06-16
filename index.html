@@ -5,172 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>J.R.R. Tolkien - Home</title>
-
-    <style>
-        /* Reset simples para remover espaçamentos padrões */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Estilo geral da página */
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4ecd8;
-            color: #2d2d2d;
-            line-height: 1.6;
-        }
-
-        /* Cabeçalho principal */
-        header {
-            background: linear-gradient(135deg, #1f4f3a, #5f3b1f);
-            color: #fff8e7;
-            text-align: center;
-            padding: 35px 20px;
-        }
-
-        header h1 {
-            font-family: Georgia, serif;
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
-
-        /* Menu de navegação */
-        nav {
-            background-color: #2f3e2f;
-            padding: 12px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: #fff8e7;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:hover,
-        nav a.ativo {
-            color: #d4af37;
-        }
-
-        /* Conteúdo principal */
-        main {
-            width: 90%;
-            max-width: 1100px;
-            margin: 25px auto;
-        }
-
-        section,
-        article,
-        aside {
-            background-color: #fff8e7;
-            margin-bottom: 25px;
-            padding: 24px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-        }
-
-        section h2,
-        article h2,
-        aside h2 {
-            color: #1f4f3a;
-            font-family: Georgia, serif;
-            margin-bottom: 10px;
-        }
-
-        img {
-            width: 100%;
-            max-width: 700px;
-            /* Altere este valor para deixar a imagem maior ou menor */
-            display: block;
-            border-radius: 12px;
-            margin: 15px auto;
-            /* Centraliza a imagem na página */
-        }
-
-        /* Layout dos cards */
-        .cards {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .card {
-            flex: 1;
-            min-width: 240px;
-            background-color: #f4ecd8;
-            padding: 18px;
-            border-radius: 10px;
-            border: 1px solid #d8c9a7;
-        }
-
-        ul,
-        ol {
-            margin-left: 25px;
-            margin-top: 10px;
-        }
-
-        aside {
-            border-left: 6px solid #d4af37;
-        }
-
-        footer {
-            background-color: #2f3e2f;
-            color: #fff8e7;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }
-
-        footer a {
-            color: #d4af37;
-        }
-
-        /* Responsividade básica */
-        @media (max-width: 700px) {
-            header h1 {
-                font-size: 28px;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .cards {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 
 <body>
-    <!-- Cabeçalho do site -->
     <header>
         <h1>J.R.R. Tolkien</h1>
         <p>O criador da Terra-média e um dos grandes nomes da literatura fantástica.</p>
     </header>
 
-    <!-- Menu de navegação entre as três páginas -->
-    <nav>
+    <nav aria-label="Navegação principal">
         <ul>
-            <li><a href="index.html" class="ativo">Home</a></li>
+            <li><a href="index.html" class="ativo" aria-current="page">Home</a></li>
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="contato.html">Contato</a></li>
         </ul>
     </nav>
 
-    <!-- Conteúdo principal da página inicial -->
     <main>
-        <!-- Primeira seção: apresentação do tema -->
         <section>
             <h2>Quem foi J.R.R. Tolkien?</h2>
             <p>
@@ -184,11 +36,11 @@
                 <strong>Terra-média</strong>.
             </p>
 
-            <img src="assets/tolkien-retrato.webp"
-                alt="Retrato de J.R.R. Tolkien, fumando um cachimbo com olhar reflexivo">
+            <img class="imagem-principal" src="assets/tolkien-retrato.webp"
+                alt="Retrato de J.R.R. Tolkien, fumando um cachimbo com olhar reflexivo" width="1572" height="1060"
+                loading="lazy" decoding="async">
         </section>
 
-        <!-- Segunda seção: obras principais -->
         <section>
             <h2>Principais obras</h2>
             <p>
@@ -221,7 +73,6 @@
             </div>
         </section>
 
-         <!-- Terceira seção: obras para conhecer -->
         <section>
             <h2>Obras para conhecer</h2>
             <p>Veja uma lista simples com obras importantes ligadas ao universo de Tolkien:</p>
@@ -235,7 +86,6 @@
             </ul>
         </section>
 
-        <!-- Conteúdo complementar -->
         <aside>
             <h2>Curiosidade</h2>
             <p>
@@ -245,11 +95,10 @@
         </aside>
     </main>
 
-    <!-- Rodapé -->
     <footer>
         <p>
             Saiba mais no site da
-            <a href="https://www.tolkiensociety.org/" target="_blank">The Tolkien Society</a>.
+            <a href="https://www.tolkiensociety.org/" target="_blank" rel="noopener noreferrer">The Tolkien Society</a>.
         </p>
     </footer>
 </body>

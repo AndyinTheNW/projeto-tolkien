@@ -1,0 +1,287 @@
+:root {
+    --color-page: #f4ecd8;
+    --color-surface: #fff8e7;
+    --color-text: #2d2d2d;
+    --color-primary: #1f4f3a;
+    --color-primary-dark: #163829;
+    --color-nav: #2f3e2f;
+    --color-brown: #5f3b1f;
+    --color-accent: #d4af37;
+    --color-border: #d8c9a7;
+    --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-page);
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+header {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-brown));
+    color: var(--color-surface);
+    text-align: center;
+    padding: 35px 20px;
+}
+
+header h1 {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+nav {
+    background-color: var(--color-nav);
+    padding: 12px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--color-surface);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover,
+nav a.ativo,
+nav a[aria-current="page"] {
+    color: var(--color-accent);
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 25px auto;
+}
+
+section,
+article,
+aside {
+    background-color: var(--color-surface);
+    margin-bottom: 25px;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+}
+
+h2,
+h3 {
+    color: var(--color-primary);
+    font-family: Georgia, serif;
+    margin-bottom: 10px;
+}
+
+p + p,
+p + h3,
+ul + p,
+ol + p {
+    margin-top: 14px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    margin: 15px auto;
+}
+
+.imagem-principal {
+    max-width: 700px;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 240px;
+    background-color: var(--color-page);
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid var(--color-border);
+}
+
+ul,
+ol {
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+aside {
+    border-left: 6px solid var(--color-accent);
+}
+
+.layout {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.layout section {
+    flex: 2;
+}
+
+.layout aside {
+    flex: 1;
+}
+
+.tabela-container {
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+caption {
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+}
+
+th {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+tr:nth-child(even) {
+    background-color: var(--color-page);
+}
+
+iframe {
+    width: 100%;
+    height: 320px;
+    border: 0;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    border: 1px solid #c8b88f;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #fffdf6;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button {
+    margin-top: 20px;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.mensagem-formulario {
+    min-height: 1.6em;
+    margin-top: 12px;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.aviso-formulario {
+    margin-top: 25px;
+    background-color: var(--color-page);
+    border: 1px solid var(--color-border);
+}
+
+footer {
+    background-color: var(--color-nav);
+    color: var(--color-surface);
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: var(--color-accent);
+}
+
+@media (max-width: 800px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav ul,
+    .cards,
+    .layout {
+        flex-direction: column;
+    }
+
+    nav ul {
+        align-items: center;
+    }
+
+    iframe {
+        height: 250px;
+    }
+}

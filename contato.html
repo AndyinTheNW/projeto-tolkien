@@ -1,198 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>J.R.R. Tolkien - Contato</title>
-
-    <style>
-        /* Reset simples */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4ecd8;
-            color: #2d2d2d;
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, #1f4f3a, #5f3b1f);
-            color: #fff8e7;
-            text-align: center;
-            padding: 35px 20px;
-        }
-
-        header h1 {
-            font-family: Georgia, serif;
-            font-size: 38px;
-            margin-bottom: 10px;
-        }
-
-        nav {
-            background-color: #2f3e2f;
-            padding: 12px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            color: #fff8e7;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        nav a:hover,
-        nav a.ativo {
-            color: #d4af37;
-        }
-
-        main {
-            width: 90%;
-            max-width: 1100px;
-            margin: 25px auto;
-        }
-
-        .layout {
-            display: flex;
-            gap: 25px;
-            align-items: flex-start;
-        }
-
-        section, aside, article {
-            background-color: #fff8e7;
-            padding: 24px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-        }
-
-        section {
-            flex: 2;
-        }
-
-        aside {
-            flex: 1;
-            border-left: 6px solid #d4af37;
-        }
-
-        h2, h3 {
-            color: #1f4f3a;
-            font-family: Georgia, serif;
-            margin-bottom: 10px;
-        }
-
-        img {
-            width: 100%;
-            border-radius: 12px;
-            margin-top: 15px;
-        }
-
-        /* Estilo do formulário */
-        form {
-            margin-top: 20px;
-        }
-
-        label {
-            display: block;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-
-        input, textarea, select {
-            width: 100%;
-            padding: 12px;
-            margin-top: 6px;
-            border: 1px solid #c8b88f;
-            border-radius: 8px;
-            font-size: 15px;
-            background-color: #fffdf6;
-        }
-
-        textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        button {
-            margin-top: 20px;
-            background-color: #1f4f3a;
-            color: #fff8e7;
-            border: none;
-            padding: 12px 22px;
-            border-radius: 8px;
-            font-weight: bold;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #163829;
-        }
-
-        article {
-            margin-top: 25px;
-            background-color: #f4ecd8;
-            border: 1px solid #d8c9a7;
-        }
-
-        footer {
-            background-color: #2f3e2f;
-            color: #fff8e7;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }
-
-        footer a {
-            color: #d4af37;
-        }
-
-        @media (max-width: 800px) {
-            header h1 {
-                font-size: 28px;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .layout {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/contato.js" defer></script>
 </head>
 
 <body>
-    <!-- Cabeçalho da página Contato -->
     <header>
         <h1>Contato</h1>
         <p>Envie uma mensagem sobre Tolkien, livros ou literatura fantástica.</p>
     </header>
 
-    <!-- Menu de navegação -->
-    <nav>
+    <nav aria-label="Navegação principal">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="sobre.html">Sobre</a></li>
-            <li><a href="contato.html" class="ativo">Contato</a></li>
+            <li><a href="contato.html" class="ativo" aria-current="page">Contato</a></li>
         </ul>
     </nav>
 
     <main>
         <div class="layout">
-            <!-- Seção principal com formulário -->
             <section>
                 <h2>Fale conosco</h2>
                 <p>
@@ -200,20 +32,19 @@
                     sobre o universo de <strong>J.R.R. Tolkien</strong>.
                 </p>
 
-                <form action="#" method="post">
-                    <!-- Campo nome -->
+                <form id="form-contato" action="#" method="post" aria-describedby="retorno-formulario">
                     <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" autocomplete="name"
+                        maxlength="80" required>
 
-                    <!-- Campo e-mail -->
                     <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail" autocomplete="email"
+                        maxlength="120" required>
 
-                    <!-- Campo assunto -->
                     <label for="assunto">Assunto:</label>
-                    <input type="text" id="assunto" name="assunto" placeholder="Digite o assunto da mensagem" required>
+                    <input type="text" id="assunto" name="assunto" placeholder="Digite o assunto da mensagem"
+                        maxlength="120" required>
 
-                    <!-- Campo categoria -->
                     <label for="categoria">Categoria:</label>
                     <select id="categoria" name="categoria" required>
                         <option value="">Selecione uma categoria</option>
@@ -224,24 +55,23 @@
                         <option value="outros">Outros assuntos</option>
                     </select>
 
-                    <!-- Campo comentário -->
                     <label for="comentario">Comentário:</label>
-                    <textarea id="comentario" name="comentario" placeholder="Escreva sua mensagem aqui" required></textarea>
+                    <textarea id="comentario" name="comentario" placeholder="Escreva sua mensagem aqui" maxlength="1000"
+                        required></textarea>
 
-                    <!-- Botão de envio -->
                     <button type="submit">Enviar mensagem</button>
+                    <p id="retorno-formulario" class="mensagem-formulario" role="status" aria-live="polite"></p>
                 </form>
 
-                <!-- Explicação sobre o formulário -->
-                <article>
+                <article class="aviso-formulario">
                     <h3>Obrigado!</h3>
                     <p>
-                        Foi um prazer ter você aqui! Sua mensagem é muito importante para nós. Responderemos o mais breve
+                        Foi um prazer ter você aqui. Sua mensagem é muito importante para nós.
+                        Responderemos o mais breve possível.
                     </p>
                 </article>
             </section>
 
-            <!-- Conteúdo lateral -->
             <aside>
                 <h2>Assuntos sugeridos</h2>
                 <p>Você pode enviar mensagens sobre:</p>
@@ -253,17 +83,19 @@
                     <li>Curiosidades da Terra-média</li>
                 </ul>
 
-                <img src="assets/gandalf-the-grey.webp" alt="Arte do Gandalf">
+                <img src="assets/gandalf-the-grey.webp" alt="Arte do Gandalf" width="800" height="450" loading="lazy"
+                    decoding="async">
             </aside>
         </div>
     </main>
 
-    <!-- Rodapé -->
     <footer>
         <p>
             Acesse a
-            <a href="https://www.tolkiensociety.org/" target="_blank">The Tolkien Society</a>. Saiba mais sobre o autor e suas obras.
+            <a href="https://www.tolkiensociety.org/" target="_blank" rel="noopener noreferrer">The Tolkien Society</a>.
+            Saiba mais sobre o autor e suas obras.
         </p>
     </footer>
 </body>
+
 </html>

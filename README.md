@@ -30,6 +30,7 @@ O projeto contém as seguintes páginas:
 
 * HTML5
 * CSS3
+* JavaScript
 * Git
 * GitHub
 * GitHub Pages
