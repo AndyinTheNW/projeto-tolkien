@@ -1,5 +1,7 @@
 # Projeto Tolkien
 
+![Capa do Projeto Tolkien](assets/capa.webp)
+
 Mini site desenvolvido em HTML e CSS com o tema inspirado no universo de J.R.R. Tolkien, especialmente em elementos da Terra-média, suas histórias, personagens e ambientação fantástica.
 
 ## Acesse o projeto
